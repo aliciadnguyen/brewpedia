@@ -1,10 +1,10 @@
 doctype html
 html lang="en" 
   head
-    meta charset="utf-8" /
-    meta content="width=device-width, initial-scale=1.0" name="viewport" /
-    meta content="" name="description" /
-    meta content="" name="author" /
+    meta charset="utf-8" 
+    meta content="width=device-width, initial-scale=1.0" name="viewport" 
+    meta content="" name="description" 
+    meta content="" name="author" 
     title Myapp
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags 
@@ -32,15 +32,15 @@ html lang="en"
               a href="#contact"  Contact
             li.dropdown
               a.dropdown-toggle data-toggle="dropdown" href="#" 
-                | Dropdown
+                | Reviews
                 b.caret
               ul.dropdown-menu
                 li
-                  a href="#"  Example menu
+                  a href="#"  IPAs
                 li
-                  a href="#"  Example menu
+                  a href="#"  Stouts
                 li
-                  a href="#"  Example menu
+                  a href="#"  Sours
         /! /.navbar-collapse
       /! /.container
     = yield
@@ -57,7 +57,7 @@ html lang="en"
       .container
         .row
           .col-lg-2.col-lg-offset-5
-            hr.marginbot-50/
+            hr.marginbot-50
         .row
           .col-lg-8
             .boxed-grey
@@ -67,14 +67,14 @@ html lang="en"
                     .form-group
                       label for="name" 
                         | Name
-                      input#name.form-control placeholder=("Enter name") required="required" type="text" /
+                      input#name.form-control placeholder=("Enter name") required="required" type="text" 
                     .form-group
                       label for="email" 
                         | Email Address
                       .input-group
                         span.input-group-addon
                           span.glyphicon.glyphicon-envelope
-                        input#email.form-control placeholder=("Enter email") required="required" type="email" /
+                        input#email.form-control placeholder=("Enter email") required="required" type="email" 
                     .form-group
                       label for="subject" 
                         | Subject
@@ -96,20 +96,20 @@ html lang="en"
               h5 Main Office
               address
                 strong Squas Design, Inc.
-                br/
+                br
                 | Tower 795 Folsom Ave, Beautiful Suite 600
-                br/
+                br
                 | San Francisco, CA 94107
-                br/
+                br
                 abbr title="Phone"  P:
                 | (123) 456-7890
               address
                 strong Email
-                br/
+                br
                 a href="mailto:#"  email.name@example.com
               address
                 strong We're on social networks
-                br/
+                br
               ul.company-social
                 li.social-facebook
                   a href="#" target="_blank" 
