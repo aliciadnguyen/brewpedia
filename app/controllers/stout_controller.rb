@@ -1,0 +1,2 @@
+class StoutController < ApplicationController
+end
