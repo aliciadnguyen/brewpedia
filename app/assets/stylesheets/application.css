@@ -13,5 +13,6 @@
  *= require bootstrap.min
  *= require animate
  *= require style
+ *= require ipa
  *= require default
  */
