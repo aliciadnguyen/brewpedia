@@ -1,0 +1,2 @@
+module IpaHelper
+end
