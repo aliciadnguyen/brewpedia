@@ -1,10 +1,10 @@
-// Place all the styles related to the Ipa controller here.
+// Place all the styles related to the Sour controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-section.ipa {
+section.sour {
   width:100%;
   position:relative;
-  background: url(/assets/hops.jpg) no-repeat top center;
+  background: url(/assets/sour.jpg) no-repeat top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,7 +12,7 @@ section.ipa {
 }
 
 .slogan {
-  padding: 620px 100px 50px;
+  padding: 420px 100px 50px;
   color: white;
   text-shadow: cornsilk;
   text-shadow: 0 2px 1px rgba(0, 0, 0, 0.65);

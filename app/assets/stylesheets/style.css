@@ -306,6 +306,10 @@ hr {
 	position:relative;
 	
 	background: url(/assets/rsz_bg.jpg) no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #intro.intro {
