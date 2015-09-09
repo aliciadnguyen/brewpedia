@@ -396,15 +396,15 @@ hr {
 .team-social a{
 	margin:0;
 	padding:0;
-    display: block;
+  display: block;
 	width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    background: #3bbec0;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #3bbec0;
 	color: #fff;
-    -webkit-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+  -webkit-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
 }
 .team-social a i{
 	text-align: center;
@@ -467,6 +467,14 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 	text-align: left;
 }
 
+@media(max-width: 1200px) { 
+  .widget-contact { margin-top: 50px; }
+  h5 { margin-bottom: 15px; }
+}
+
+@media(max-width: 767px) {
+  .widget-contact, .company-social { text-align: center !important; }
+}
 
 .company-social {
 	margin-left: 0;
@@ -479,7 +487,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 }
 
 .company-social li{
-    display: inline-block;
+  display: inline-block;
 	margin:0 !important;
 	padding:0;
 }
