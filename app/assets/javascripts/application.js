@@ -14,5 +14,9 @@
 //= require bootstrap.min
 //= require jquery.easing.min
 //= require jquery.scrollTo
+//= require jquery.flip
+//= require underscore
+//= require backbone
+//= require ipa
 //= require wow.min
 //= require custom
