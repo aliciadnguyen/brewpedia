@@ -13,9 +13,7 @@
  *= require bootstrap.min
  *= require animate
  *= require style
- *= require home
- *= require ipa
- *= require stout
- *= require sour
+ *= require beers
+ *= require beer_types
  *= require default
  */
