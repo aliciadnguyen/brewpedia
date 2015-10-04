@@ -1,5 +1,5 @@
-var IpaView = Backbone.View.extend({
-	el: '.ipa',
+var BeerView = Backbone.View.extend({
+	el: '.beer',
 
 	events: {
 		'click .button' : 'flipBox',
@@ -21,4 +21,4 @@ var IpaView = Backbone.View.extend({
 	}
 });
 
-var ipaView = new IpaView();
+var beerView = new BeerView();

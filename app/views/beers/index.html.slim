@@ -17,12 +17,12 @@ section#beer-types.home-section.text-center
             .section-heading
               h2 Beer Types
               i.fa.fa-2x.fa-angle-down
-  - @beers.each do |b|
-    .container
-      .row
-        .col-lg-2.col-lg-offset-5
-          hr.marginbot-50
-      .row
+  .container
+    .row
+      .col-lg-2.col-lg-offset-5
+        hr.marginbot-50
+    .row
+      - @beers.each do |b|
         .col-xs-12.col-sm-6.col-md-3
           .wow.bounceInUp data-wow-delay="0.2s" 
             a = link_to beer_path(b)

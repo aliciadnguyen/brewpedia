@@ -17,6 +17,6 @@
 //= require jquery.flip
 //= require underscore
 //= require backbone
-//= require ipa
+//= require beer
 //= require wow.min
 //= require custom

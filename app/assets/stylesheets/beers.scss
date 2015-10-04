@@ -1,3 +1,53 @@
 // Place all the styles related to the Beers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+section.beer {
+  width:100%;
+  position:relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: black;
+
+  .slogan {
+    padding: 150px 70px 50px;
+    color: white;
+    p { font-size: 18px; }
+  }
+}
+
+.content {
+  .boxed {
+    height: 400px;
+    width: 90%;
+    margin: 30px auto;
+    cursor: pointer;
+    &:hover {
+      .button {
+      visibility: visible;
+      }
+    }
+    img { margin: 15px auto; }
+    h1 {
+      padding-top: 10%;
+      font-size: 65px;
+      text-align: center;
+      color: whitesmoke;
+      word-wrap: break-word;
+      text-shadow: 0 2px 1px rgba(0, 0, 0, 0.65);
+    }
+    .button { 
+      visibility: hidden;
+      margin-left: 105px;
+    }
+  }
+  .red { background-color: #922E2E; }
+  .blue { background-color: #1B5757; }
+  .green { background-color: #69882B; }
+  .back {
+    overflow: auto;
+    border: 3px solid grey;
+        padding: 15px;
+  }
+}
