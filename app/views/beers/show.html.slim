@@ -1,0 +1,21 @@
+link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
+section#intro.ipa
+  .slogan
+    h1 = @beer.beer_style
+    p = @beer.description
+.row.content
+  .col-xs-12.col-sm-6.col-md-4
+    .boxed
+      - @beer_types.each do |b|
+        .front.red
+          h1 BooKoo
+          .btn.btn-primary.button Read Review
+        .back 
+          h3 Review
+          p Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare. Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram
+          h3 Taste
+          p = b.taste
+          h3 Smell
+          p = b.smell
+          h3 Overall Quality
+          p = b.overall
