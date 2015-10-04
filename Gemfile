@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'font-awesome-sass'
 gem 'slim-rails'
 gem "rails-backbone"
+gem 'activerecord-reset-pk-sequence'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

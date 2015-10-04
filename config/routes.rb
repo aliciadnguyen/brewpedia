@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   root 'beers#index'
   get 'ipa' => 'ipa#index'
   get 'stout' => 'stout#index'
-  get '/:id' => 'beers#show', as: :beer
-  get '/beer_types/:id' => 'beer_types#show', as: :beer_type
-  get '/beer_types/:id/edit' => 'beer_types#edit', as: :edit_beer_type
-  patch '/beer_types/:id' => 'beer_types#update'
+  get '/bt=:id' => 'beers#show', as: :beer
+  # get '/beer_types/:id' => 'beer_types#show', as: :beer_type
+  # get '/beer_types/:id/edit' => 'beer_types#edit', as: :edit_beer_type
+  # patch '/beer_types/:id' => 'beer_types#update'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

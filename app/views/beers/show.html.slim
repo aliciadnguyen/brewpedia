@@ -8,11 +8,11 @@ section#intro.ipa
     .boxed
       - @beer_types.each do |b|
         .front.red
-          h1 BooKoo
+          h1 = b.name
           .btn.btn-primary.button Read Review
         .back 
           h3 Review
-          p Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare. Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram
+          p = b.review
           h3 Taste
           p = b.taste
           h3 Smell
