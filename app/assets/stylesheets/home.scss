@@ -10,7 +10,7 @@
   .blue { background-color: #1B5757; }
   .green { background-color: #69882B; }
   .brown { background-color: #A76025; }
-  a { 
+  h1 { 
     color: white; 
     text-transform: uppercase;
     font-family: Montserrat,sans-serif;
@@ -19,6 +19,10 @@
     font-size: 40px;
     color: whitesmoke;
     word-wrap: break-word;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.65);
+  }
+  .beer-img {
+    height: 14vh;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.65);
   }
 }
