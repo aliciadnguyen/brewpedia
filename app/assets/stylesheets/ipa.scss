@@ -45,4 +45,9 @@ section.ipa {
   .red { background-color: #922E2E; }
   .blue { background-color: #1B5757; }
   .green { background-color: #69882B; }
+  .back {
+    overflow: auto;
+    border: 3px solid grey;
+        padding: 15px;
+  }
 }
