@@ -2,14 +2,14 @@ link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.m
 /! Section: intro
 section#intro.intro
   .slogan
-    h2 WELCOME TO BEER NATION
-    h4 WE ARE GROUP OF GENTLEMEN (& LADIES) MAKING AWESOME BEER REVIEWS
+    h2 WELCOME TO BREWPEDIA
+    h4 An encyclopedia of beers
   .page-scroll
-    a.btn.btn-circle href="#beer-types" 
+    a.btn.btn-circle.hidden-xs href="#beer-types" 
       i.fa.fa-angle-double-down.animated
 /! Section: about
 section#beer-types.home-section.text-center
-  .heading-beer-types
+  .heading.beer-types
     .container
       .row
         .col-lg-8.col-lg-offset-2
@@ -23,74 +23,74 @@ section#beer-types.home-section.text-center
         hr.marginbot-50
     .row
       - @beers.each do |b|
-        .col-xs-12.col-sm-6.col-md-3
+        .col-xs-12.col-sm-6.col-md-3.beer
           .wow.bounceInUp data-wow-delay="0.2s" 
             a = link_to beer_path(b)
-              .team.boxed-grey.red
+              .team.boxed-grey.box
                 .inner
                   img.beer-img src="/assets/white-beer.png"
                   h1 = b.beer_style
 /! Section: contact
-    section#contact.home-section.text-center
-      .heading-contact
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .wow.bounceInDown data-wow-delay="0.4s" 
-                .section-heading
-                  h2 Get in touch
-                  i.fa.fa-2x.fa-angle-down
-      .container
-        .row
-          .col-lg-2.col-lg-offset-5
-            hr.marginbot-50
-        .row
-          .col-lg-8
-            .boxed-grey
-              form#contact-form
-                .row
-                  .col-md-6
-                    .form-group
-                      label for="name" 
-                        | Name
-                      input#name.form-control placeholder=("Enter name") required="required" type="text" 
-                    .form-group
-                      label for="email" 
-                        | Email Address
-                      .input-group
-                        span.input-group-addon
-                          span.glyphicon.glyphicon-envelope
-                        input#email.form-control placeholder=("Enter email") required="required" type="email" 
-                    .form-group
-                      label for="subject" 
-                        | Subject
-                      select#subject.form-control name="subject" required="required" 
-                        option selected="" value="na"  Choose One:
-                        option value="service"  General Customer Service
-                        option value="suggestions"  Suggestions
-                        option value="product"  Product Support
-                  .col-md-6
-                    .form-group
-                      label for="name" 
-                        | Message
-                      textarea#message.form-control cols="25" name="message" placeholder="Message" required="required" rows="9" 
-                  .col-md-12
-                    button#btnContactUs.btn.btn-skin.pull-right type="submit" 
-                      | Send Message
-          .col-lg-4
-            .widget-contact
-              h5 Main Office
-              address
-                strong Beer Castle
-                br
-                | 5758 SunnyTale
-                br
-                | San Diego, CA 92111
-                br
-                abbr title="Phone"  P:
-                | (858) 208-9843
-              address
-                strong Email
-                br
-                a href="mailto:#"  aliciadnguyen@gmail.com
-              address
+section#contact.home-section.text-center
+  .heading-contact
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2
+          .wow.bounceInDown data-wow-delay="0.4s" 
+            .section-heading
+              h2 Get in touch
+              i.fa.fa-2x.fa-angle-down
+  .container
+    .row
+      .col-lg-2.col-lg-offset-5
+        hr.marginbot-50
+    .row
+      .col-lg-8
+        .boxed-grey
+          form#contact-form
+            .row
+              .col-md-6
+                .form-group
+                  label for="name" 
+                    | Name
+                  input#name.form-control placeholder=("Enter name") required="required" type="text" 
+                .form-group
+                  label for="email" 
+                    | Email Address
+                  .input-group
+                    span.input-group-addon
+                      span.glyphicon.glyphicon-envelope
+                    input#email.form-control placeholder=("Enter email") required="required" type="email" 
+                .form-group
+                  label for="subject" 
+                    | Subject
+                  select#subject.form-control name="subject" required="required" 
+                    option selected="" value="na"  Choose One:
+                    option value="service"  General Customer Service
+                    option value="suggestions"  Suggestions
+                    option value="product"  Product Support
+              .col-md-6
+                .form-group
+                  label for="name" 
+                    | Message
+                  textarea#message.form-control cols="25" name="message" placeholder="Message" required="required" rows="9" 
+              .col-md-12
+                button#btnContactUs.btn.btn-skin.pull-right type="submit" 
+                  | Send Message
+      .col-lg-4
+        .widget-contact
+          h5 Main Office
+          address
+            strong Beer Castle
+            br
+            | 5758 SunnyTale
+            br
+            | San Diego, CA 92111
+            br
+            abbr title="Phone"  P:
+            | (858) 208-9843
+          address
+            strong Email
+            br
+            a href="mailto:#"  aliciadnguyen@gmail.com
+          address

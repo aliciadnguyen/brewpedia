@@ -4,10 +4,10 @@ section#intro.beer
     h1 = @beer.beer_style
     p = @beer.description
 .row.content
-  .col-xs-12.col-sm-6.col-md-4
-    .boxed
-      - @beer_types.each do |b|
-        .front.red
+  - @beer_types.each do |b|
+    .col-xs-12.col-sm-6.col-md-4.beer-style
+      .boxed
+        .front
           h1 = b.name
           .btn.btn-primary.button Read Review
         .back 
