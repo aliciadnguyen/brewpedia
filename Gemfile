@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.4'
-gem 'sqlite3'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'sass-rails', '~> 5.0'

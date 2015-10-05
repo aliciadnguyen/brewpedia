@@ -42,9 +42,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             ]
           }
         }]
-      },
-      mysql: {
-        server_root_password: ''
       }
     }
   end
