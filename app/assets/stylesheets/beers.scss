@@ -23,6 +23,7 @@ section.beer {
     width: 90%;
     margin: 30px auto;
     cursor: pointer;
+    overflow: hidden;
     &:hover {
       .button {
       visibility: visible;

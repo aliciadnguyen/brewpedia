@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-
-gem 'rails', '4.2.4'
+ruby '2.0.0'
+gem 'rails', '4.2.4' 
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'sass-rails', '~> 5.0'
@@ -27,5 +27,6 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
