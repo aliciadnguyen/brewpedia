@@ -21,5 +21,4 @@ class BeerTypesController < ApplicationController
 			params.require(:beer_type).permit(:name, :review, :appearance, :smell, 
 											  :taste, :overall, :location, :brewery, :beer_id)
 		end
-	end
 end
