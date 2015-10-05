@@ -4,12 +4,22 @@
 #beer-types {
 	.boxed-grey { 
     padding: 60px 0px; 
+    margin: 15px 0px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(44, 46, 47, 0.6);
   }
-  .red { background-color: #922E2E; }
-  .blue { background-color: #1B5757; }
-  .green { background-color: #69882B; }
-  .brown { background-color: #A76025; }
+
+  .beer:nth-child(1n) {
+    .box { background-color: #922E2E; }
+  }
+  .beer:nth-child(2n) {
+    .box { background-color: #1B5757; }
+  }
+  .beer:nth-child(3n) {
+    .box { background-color: #69882B; }
+  }
+  .beer:nth-child(4n) {
+    .box { background-color: #A76025; }
+  }
   h1 { 
     color: white; 
     text-transform: uppercase;

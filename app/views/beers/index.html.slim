@@ -2,14 +2,14 @@ link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.m
 /! Section: intro
 section#intro.intro
   .slogan
-    h2 WELCOME TO BEER NATION
-    h4 WE ARE GROUP OF GENTLEMEN (& LADIES) MAKING AWESOME BEER REVIEWS
+    h2 WELCOME TO BREWPEDIA
+    h4 An encyclopedia of beers
   .page-scroll
-    a.btn.btn-circle href="#beer-types" 
+    a.btn.btn-circle.hidden-xs href="#beer-types" 
       i.fa.fa-angle-double-down.animated
 /! Section: about
 section#beer-types.home-section.text-center
-  .heading-beer-types
+  .heading.beer-types
     .container
       .row
         .col-lg-8.col-lg-offset-2
@@ -23,10 +23,10 @@ section#beer-types.home-section.text-center
         hr.marginbot-50
     .row
       - @beers.each do |b|
-        .col-xs-12.col-sm-6.col-md-3
+        .col-xs-12.col-sm-6.col-md-3.beer
           .wow.bounceInUp data-wow-delay="0.2s" 
             a = link_to beer_path(b)
-              .team.boxed-grey.red
+              .team.boxed-grey.box
                 .inner
                   img.beer-img src="/assets/white-beer.png"
                   h1 = b.beer_style
