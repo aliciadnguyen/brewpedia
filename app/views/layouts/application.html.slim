@@ -31,6 +31,9 @@ html lang="en"
         /! /.navbar-collapse
       /! /.container
     = yield
+    nav.navbar.navbar-custom.navbar-fixed-bottom.bottom-nav.visible-xs
+      .container
+        p = link_to "Add Beer", new_beer_type_path
     footer
       .container
         .row

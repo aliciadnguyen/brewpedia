@@ -1,0 +1,26 @@
+h1.add-beer Add a New Beer!
+.container
+	.form = form_for BeerType.new, action: :create do |b|
+		.label for="beer_type[beer]" Name
+		p = b.text_field :beer
+		.label for="beer_type[name]" Name
+		p = b.text_field :name
+		.label for="beer_type[brewery]"
+		p = b.text_field :brewery
+		.label for="beer_type[location]"
+		p = b.text_field :location
+		.label for="beer_type[review]"
+		p = b.text_field :review
+		.label for="beer_type[appearnce]"
+		p = b.text_field :appearance
+		.label for="beer_type[smell]"
+		p = b.text_field :smell
+		.label for="beer_type[taste]"
+		p = b.text_field :taste
+		.actions = b.submit "Submit"
+		.label for="beer_type[overall]"
+		p = b.text_field :overall
+		.label for="beer_type[id]"
+		p = b.text_field :id
+		.label for="beer_type[beer_id]"
+		p = b.collection_select :beer_id, Beer.all, :id, :beer_style
