@@ -7,19 +7,28 @@
 ## config/database.yml ##
 
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  database: development
+  host: localhost
   pool: 5
-  timeout: 5000
+  username: psql_dev
+  password: "ushilove"
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  database: test
+  host: localhost
   pool: 5
-  timeout: 5000
+  username: psql_test
+  password: "ushilove"
 
 production:
   adapter: postgresql
-  database: treebook
+  encoding: utf8
+  database: production
+  host: localhost
   pool: 5
-  timeout: 5000
+  username: alicianguyen
+  password: "ushilove"
