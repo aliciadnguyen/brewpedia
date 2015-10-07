@@ -12,12 +12,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'font-awesome-sass'
 gem 'slim-rails'
 gem "rails-backbone"
+gem 'taps', '~> 0.3.24'
 gem 'activerecord-reset-pk-sequence'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
-  gem 'sqlite3'
 end
 
 group :development do
@@ -25,7 +25,7 @@ group :development do
   gem 'spring'
 end
 
-group :production do
+group :development, :test, :production do
   gem 'pg'
   gem 'rails_12factor'
 end
