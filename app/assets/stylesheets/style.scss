@@ -811,11 +811,12 @@ Parallax
 	}
 
   .navbar-fixed-bottom {
+    padding: 0 0 !important;
     background-color: black;
     border-top: 2px solid white;
     .container {
-      height: 100px;
-      padding: 25px 0px 0px 25px;
+      height: 75px;
+      padding: 15px 0px 0px 0px;
       .add {
         margin: 0px auto;
         display: table;

@@ -88,15 +88,19 @@
       font-weight: 700;
       letter-spacing: 1px;
       border-radius: 0px;
+      vertical-align: baseline;
     }
-    p { display: inline-block; }
+    .input { 
+      display: inline-block; 
+      vertical-align: baseline;
+      margin-bottom: 20px;
+    }
     input, textarea, select {
       background-color: #ddd;
-      border: none;
+      border: white solid 1px;
       opacity: .6;
       width: 45vw;;
       height: 40px;
-      margin-right: -2px;
       color: black;
       font-weight: bold;
       padding-left: 10px;

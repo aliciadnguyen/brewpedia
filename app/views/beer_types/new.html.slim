@@ -7,31 +7,31 @@
 		/ p = b.text_field :beer
 		.form-field
 			.label for="beer_type[name]" Name
-			p = b.text_field :name
+			.input = b.text_field :name
 		.form-field
 			.label for="beer_type[beer_id]" Beer Type
-			p = b.collection_select :beer_id, Beer.all, :id, :beer_style
+			.input = b.collection_select :beer_id, Beer.all, :id, :beer_style
 		.form-field
 			.label for="beer_type[brewery]" Brewery
-			p = b.text_field :brewery
+			.input = b.text_field :brewery
 		.form-field
 			.label for="beer_type[location]" Location
-			p = b.text_field :location
+			.input = b.text_field :location
 		.form-field
 			.label.label-text for="beer_type[review]" Review
-			p = b.text_area :review
+			.input = b.text_area :review
 		.form-field
 			.label.label-text for="beer_type[appearance]" Appearance
-			p = b.text_area :appearance
+			.input = b.text_area :appearance
 		.form-field
 			.label.label-text for="beer_type[smell]" Smell
-			p = b.text_area :smell
+			.input = b.text_area :smell
 		.form-field
 			.label.label-text for="beer_type[taste]" Taste
-			p = b.text_area :taste
+			.input = b.text_area :taste
 		.form-field
 			.label for="beer_type[overall]" Overall
-			p = b.text_field :overall
+			.input = b.text_field :overall
 		.actions = b.submit "Submit"
 		/ .label for="beer_type[id]" 
 		/ p = b.text_field :id
