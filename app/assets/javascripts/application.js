@@ -18,5 +18,6 @@
 //= require underscore
 //= require backbone
 //= require beer
+//= require home
 //= require wow.min
 //= require custom

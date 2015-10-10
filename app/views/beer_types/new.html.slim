@@ -1,0 +1,38 @@
+.add-beer
+	h3 Can't find a beer you're looking for?
+	p. No problem, add one today!
+.form-container
+	.form = form_for BeerType.new, action: :create do |b|
+		/ .label for="beer_type[beer]" Beer
+		/ p = b.text_field :beer
+		.form-field
+			.label for="beer_type[name]" Name
+			p = b.text_field :name
+		.form-field
+			.label for="beer_type[beer_id]" Beer Type
+			p = b.collection_select :beer_id, Beer.all, :id, :beer_style
+		.form-field
+			.label for="beer_type[brewery]" Brewery
+			p = b.text_field :brewery
+		.form-field
+			.label for="beer_type[location]" Location
+			p = b.text_field :location
+		.form-field
+			.label.label-text for="beer_type[review]" Review
+			p = b.text_area :review
+		.form-field
+			.label.label-text for="beer_type[appearance]" Appearance
+			p = b.text_area :appearance
+		.form-field
+			.label.label-text for="beer_type[smell]" Smell
+			p = b.text_area :smell
+		.form-field
+			.label.label-text for="beer_type[taste]" Taste
+			p = b.text_area :taste
+		.form-field
+			.label for="beer_type[overall]" Overall
+			p = b.text_field :overall
+		.actions = b.submit "Submit"
+		/ .label for="beer_type[id]" 
+		/ p = b.text_field :id
+		/ .label for="beer_type[beer_id]"
