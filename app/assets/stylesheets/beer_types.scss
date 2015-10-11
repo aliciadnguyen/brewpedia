@@ -38,5 +38,66 @@
 }
 
 .add-beer {
-  margin-top: 100px;
+  background-color: black;
+  height: 220px;
+  color: white;
+  padding: 120px 0px 0 30px;
+  h3 { margin-bottom: 0px; }
+}
+
+.form-container {
+  background: url(/assets/barrel.jpg) center no-repeat;
+  background-size: cover;
+  width: inherit;
+  .form { 
+    padding: 60px;
+    .actions input {
+      background-color: black;
+      border: none;
+      color: white;
+      width: 200px;
+      height: 40px;
+      margin-left: 22%;
+      text-transform: uppercase;
+      font-family: Montserrat,sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.new_beer_type {
+  .form-field {
+    display: flex;
+    .label {
+      color: white;
+      border: white solid 1px;
+      background-color: white;
+      color: black;
+      height: 40px;
+      padding-top: 13px;
+      width: 130px;
+      display: inline-block;
+      text-transform: uppercase;
+      font-family: Montserrat,sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    p { display: inline-block; }
+    input, textarea, select {
+      background-color: #ddd;
+      border: none;
+      opacity: .6;
+      width: 45vw;;
+      height: 40px;
+      margin-right: -2px;
+      color: black;
+      font-weight: bold;
+      padding-left: 10px;
+    }
+    textarea, .label-text {
+      height: 60px;
+    }
+    .label-text { padding-top: 23px; }
+  }
 }

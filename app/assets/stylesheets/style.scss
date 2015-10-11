@@ -782,6 +782,27 @@ Parallax
 
   .navbar-fixed-bottom {
     background-color: black;
+    border-top: 2px solid white;
+    .container {
+      height: 100px;
+      padding: 25px 0px 0px 25px;
+      .add {
+        margin: 0px auto;
+        display: table;
+        a { 
+          color: white;
+          font-size: 25px;
+          text-transform: uppercase;
+          font-family: Montserrat,sans-serif;
+          -webkit-font-smoothing: antialiased;
+          letter-spacing: 5px;
+        }
+        img {
+          height: 45px;
+          padding-right: 10px;
+        }
+      }
+    }
   }
 	
 }

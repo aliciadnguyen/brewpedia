@@ -8,6 +8,9 @@ var BeerView = Backbone.View.extend({
 
 	initialize: function() {
 		this.flipBox();
+		if (window.location.pathname == "/beer_types/new") {
+			this.$("footer").hide();
+		}
 	},
 
 	flipBox: function() {
