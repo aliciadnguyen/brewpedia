@@ -31,10 +31,10 @@ html lang="en"
         /! /.navbar-collapse
       /! /.container
     = yield
-    nav.navbar.navbar-custom.navbar-fixed-bottom.mobile-bottom-nav.visible-xs
+    nav.navbar.navbar-custom.navbar-fixed-bottom.mobile-bottom-nav
       .container
         .add = link_to "#{image_tag('plus.png')} ADD BEER".html_safe,  new_beer_type_path
-    .navbar-fixed-bottom.bottom-nav.hidden-xs
+    .navbar-fixed-bottom.bottom-nav
       .container
         .add = link_to "#{image_tag('plus.png')} ADD BEER".html_safe,  new_beer_type_path
     footer

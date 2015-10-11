@@ -56,7 +56,12 @@ a:focus {
   font-weight: 400;
 }
 
+.mobile-bottom-nav {
+  @media(min-width: 769px) { display: none; }
+}
+
 .bottom-nav {
+  @media(max-width: 768px) { display: none; }
   .container {
     color: white;
     border-radius: 9px;
