@@ -1,26 +1,17 @@
 var BeerView = Backbone.View.extend({
-	el: '.beer',
+	el: '.row.content.beer',
 
 	events: {
-		'click .button' : 'flipBox',
-		'mouseenter .boxed' : 'addOverlay'
+		'click .button' : 'flipBox'
 	},
 
 	initialize: function() {
 		this.flipBox();
-		if (window.location.pathname == "/beer_types/new") {
-			this.$("footer").hide();
-		}
 	},
 
 	flipBox: function() {
-		var box = $('.boxed');
-		box.flip().removeClass('.hover');
-	},
-
-	addOverlay: function() {
-		var box = $('.boxed');
-		box.addClass('overlay');
+		var box = this.$('.boxed');
+		box.flip();
 	}
 });
 

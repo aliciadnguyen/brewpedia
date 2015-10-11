@@ -10,15 +10,19 @@
 
   .beer:nth-child(1n) {
     .box { background-color: #922E2E; }
+    .box:hover { background-color: #6B1212 }
   }
   .beer:nth-child(2n) {
     .box { background-color: #1B5757; }
+    .box:hover { background-color: #0B4040 }
   }
   .beer:nth-child(3n) {
     .box { background-color: #69882B; }
+    .box:hover { background-color: #0F560F }
   }
   .beer:nth-child(4n) {
     .box { background-color: #A76025; }
+    .box:hover { background-color: #6B3B12 }
   }
   h1 { 
     color: white; 
@@ -49,6 +53,7 @@
   background: url(/assets/barrel.jpg) center no-repeat;
   background-size: cover;
   width: inherit;
+  padding-bottom: 50px;
   .form { 
     padding: 60px;
     .actions input {

@@ -31,10 +31,12 @@ html lang="en"
         /! /.navbar-collapse
       /! /.container
     = yield
-    nav.navbar.navbar-custom.navbar-fixed-bottom.bottom-nav.visible-xs
+    nav.navbar.navbar-custom.navbar-fixed-bottom.mobile-bottom-nav.visible-xs
       .container
         .add = link_to "#{image_tag('plus.png')} ADD BEER".html_safe,  new_beer_type_path
-        / p = link_to "Add Beer", new_beer_type_path
+    .navbar-fixed-bottom.bottom-nav.hidden-xs
+      .container
+        .add = link_to "#{image_tag('plus.png')} ADD BEER".html_safe,  new_beer_type_path
     footer
       .container
         .row
@@ -47,5 +49,5 @@ html lang="en"
             p.small 
               | * Source: Beer Advocate, Wikipedia, 
               | Beer by Mark Caron from Noun Project,
-              | Arrow by Austin Condiff from the Noun Project
+              | Plus by Nimal Raj from the Noun Project
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
