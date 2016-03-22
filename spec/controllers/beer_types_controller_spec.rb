@@ -12,9 +12,11 @@ RSpec.describe BeerTypesController, :type => :controller do
 			get :new
 			expect(response).to render_template("new")
 		end
+	end
 
+	describe "POST #new" do
 		it "it should save a beer create by user" do 
-			get :new
+			post :new
 			before_count = BeerType.count
 			post :create, :beer_type => { :name  =>"Boo Koo", 
 							     :review => "Tis good", 
