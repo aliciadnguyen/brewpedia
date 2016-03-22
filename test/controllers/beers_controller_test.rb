@@ -1,7 +1,11 @@
-require 'test_helper'
+require 'spec_helper'
 
-class BeersControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+RSpec.describe BeerController, :type => :controller do 
+	describe "GET #index" do 
+		it "populates all the beer types" do 
+			get :index
+			expect(response).to be_success
+		end
+		
+	end
 end
