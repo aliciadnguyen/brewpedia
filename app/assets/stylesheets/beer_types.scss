@@ -56,7 +56,7 @@
   background-size: cover;
   width: inherit;
   padding-bottom: 90px;
-  .form { 
+  form#beer-form { 
     padding: 60px;
     @media(max-width: 450px) { padding: 60px 4vw; }
     .actions input {
@@ -74,7 +74,7 @@
   }
 }
 
-.new_beer_type {
+#beer-form {
   .form-field {
     display: flex;
     .label, .input {
@@ -116,5 +116,11 @@
       height: 60px;
     }
     .label-text { padding-top: 23px; }
+    .error { 
+      color: white;
+      text-transform: uppercase;
+      font-family: Montserrat,sans-serif;
+      font-size: 12px;
+    }
   }
 }
