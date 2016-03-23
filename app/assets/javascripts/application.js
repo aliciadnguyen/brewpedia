@@ -21,5 +21,6 @@
 //= require beer
 //= require beer_types
 //= require home
+//= require sinon
 //= require wow.min
 //= require custom
