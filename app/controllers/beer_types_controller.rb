@@ -11,6 +11,12 @@ class BeerTypesController < ApplicationController
 		@beer_type = BeerType.find(params[:id])
 	end
 
+	def destroy
+		@beer_type = BeerType.find(params[:id])
+		@beer_type.destroy
+		redirect_to root_path
+	end
+
 	def create
 		@beer_type = BeerType.new(beer_type_params)
 		if @beer_type.save
@@ -23,7 +29,7 @@ class BeerTypesController < ApplicationController
 	def update
 		@beer_type = BeerType.find(params[:id])
 		if @beer_type.update(beer_type_params)
-			redirect_to @beer_type
+			redirect_to root_path
 		else
 			render 'edit'
 		end

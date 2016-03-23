@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'beers#index'
   get '/beer/:id' => 'beers#show', as: :beer
-  get '/beer_types/new' => 'beer_types#new'
-  get '/beer_types/:id/edit' => 'beer_types#edit'
-  post '/beer_types/:id' => 'beer_types#show'
+  # get '/beer_types/new' => 'beer_types#new'
+  # get '/beer_types/:id/edit' => 'beer_types#edit'
+  # post '/beer_types/:id' => 'beer_types#show'
 
   resources :beer_types
   # get '/beer_types/:id' => 'beer_types#show', as: :beer_type

@@ -15,6 +15,7 @@
 //= require jquery.easing.min
 //= require jquery.scrollTo
 //= require jquery.flip
+//= require rails
 //= require underscore
 //= require backbone
 //= require beer
