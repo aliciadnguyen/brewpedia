@@ -8,4 +8,7 @@ To test javascript unit test:
   1. Go to: http://localhost:3000/jasmine
 
 To test ruby unit tests:
-  1. rake spec
+  1. run 'rake spec'
+
+When including new gems in Gemfile:
+  1. run 'bundle install'
