@@ -8,7 +8,16 @@ To test javascript unit test:
   1. Go to: http://localhost:3000/jasmine
 
 To test ruby unit tests:
-  1. run 'rake spec'
+  1. Run 'rake spec'
 
 When including new gems in Gemfile:
   1. run 'bundle install'
+
+To deploy to heroku:
+  1. Push all the changes to github master
+  2. Run 'git push heroku master'
+  3. Update schema and seed file, run 'heroku run rake:db migrate /seed'
+  4. Look at heroku logs for debugging, run 'heroku logs --app brewpedia'
+  
+To avoid entering username and password for git login:
+  1. Run 'git remote set-url origin git@github.com:username/repo.git'
