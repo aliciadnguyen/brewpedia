@@ -1,14 +1,14 @@
 class BeerTypesController < ApplicationController
+	before_action :set_beer, only: [:show, :edit, :update]
+
 	def new
 		@beer_type = BeerType.new
 	end
 
 	def show
-		@beer_type = BeerType.find(params[:id])
 	end
 
 	def edit
-		@beer_type = BeerType.find(params[:id])
 	end
 
 	def create
@@ -21,10 +21,10 @@ class BeerTypesController < ApplicationController
 	end
 
 	def update
-		@beer_type = BeerType.find(params[:id])
-		if @beer_type.update(beer_type_params)
-			redirect_to @beer_type
+		if (@beer_type.update_attribute(beer_type_params))
+			redirect_to root_path
 		else
+			flash[:note] = 'Error!'
 			render 'edit'
 		end
 	end
@@ -32,5 +32,9 @@ class BeerTypesController < ApplicationController
 	private
 		def beer_type_params
 			params.require(:beer_type).permit(:name, :review, :appearance, :smell, :taste, :overall, :location, :brewery, :beer_id)
+		end
+
+		def set_beer
+			@beer_type = BeerType.find(params[:id])
 		end
 end

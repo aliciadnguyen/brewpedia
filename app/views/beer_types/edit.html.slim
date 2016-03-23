@@ -1,8 +1,7 @@
-.add-beer
-	h3 Can't find a beer you're looking for?
-	p. No problem, add one today!
-.form-container
-	form.form#beer-form = form_for BeerType.new, action: :create, method: :post do |b|
+.edit-beer
+	h3 Editing Beer
+.form-container-edit
+	form.form#edit-beer-form = form_for @beer_type, action: :update, html: {method: :post} do |b|
 		.form-field
 			.label for="beer_type[name]" Name
 			.input = b.text_field :name
@@ -30,4 +29,4 @@
 		.form-field
 			.label for="beer_type[overall]" Overall
 			.input = b.text_field :overall
-		.actions.btn-submit = b.submit "Submit"
+		.actions = b.submit "Update"

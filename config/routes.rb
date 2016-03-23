@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   get '/beer/:id' => 'beers#show', as: :beer
   get '/beer_types/new' => 'beer_types#new'
   get '/beer_types/:id/edit' => 'beer_types#edit'
-  post '/beer_types/:id' => 'beer_types#show'
-
+  post '/beer_types/:id' => 'beer_types#update'
+  put '/beer_types/:id' => 'beer_types#update'
+  patch '/beer_types/:id' => 'beer_types#update'
   resources :beer_types
   # get '/beer_types/:id' => 'beer_types#show', as: :beer_type
   # get '/beer_types/:id/edit' => 'beer_types#edit', as: :edit_beer_type

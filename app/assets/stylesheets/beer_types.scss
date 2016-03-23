@@ -56,7 +56,7 @@
   background-size: cover;
   width: inherit;
   padding-bottom: 90px;
-  form#beer-form { 
+  form#beer-form, #edit-beer-form { 
     padding: 60px;
     @media(max-width: 450px) { padding: 60px 4vw; }
     .actions input {
@@ -74,7 +74,7 @@
   }
 }
 
-#beer-form {
+#beer-form, #edit-beer-form {
   .form-field {
     display: flex;
     .label, .input {

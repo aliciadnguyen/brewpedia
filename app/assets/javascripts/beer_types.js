@@ -2,7 +2,7 @@ var BeerTypeView = Backbone.View.extend({
 	el: '.form-container',
 
 	events: {
-		'click .actions' : 'formValidate'
+		'click .btn-submit' : 'formValidate'
 	},
 
 	initialize: function() {
