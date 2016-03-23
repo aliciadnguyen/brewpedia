@@ -19,6 +19,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
+  gem 'jasmine-sinon-rails', '~> 1.3', '>= 1.3.4'
+  gem 'jasmine'
+  gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
 end
 
 group :development do

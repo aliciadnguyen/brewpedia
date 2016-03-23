@@ -15,9 +15,12 @@
 //= require jquery.easing.min
 //= require jquery.scrollTo
 //= require jquery.flip
+//= require jquery.validate
 //= require underscore
 //= require backbone
 //= require beer
+//= require beer_types
 //= require home
+//= require sinon
 //= require wow.min
 //= require custom
