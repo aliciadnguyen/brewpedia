@@ -70,11 +70,4 @@ ActiveRecord::Schema.define(version: 20160324065652) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "search_suggestions", force: :cascade do |t|
-    t.string   "term"
-    t.integer  "popularity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
