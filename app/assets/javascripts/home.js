@@ -5,9 +5,9 @@ var HomeView = Backbone.View.extend({
 		if (window.location.pathname == "/beer_types/new") {
 			this.$("footer").hide();
 		}
-		$("#search_beer").autocomplete({
-			source: "/search_suggestions"
-		});
+		// $("#search_beer").autocomplete({
+		// 	source: "/search_suggestions"
+		// });
 	}
 });
 

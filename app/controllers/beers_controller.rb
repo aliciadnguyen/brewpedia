@@ -5,12 +5,12 @@ class BeersController < ApplicationController
 
 	def show
 		@beer = Beer.find(params[:id])
-		@beer_types = BeerType.all
+		@beer_types = @beer.beer_types
 
 		if params[:search]
-			@beer_types = BeerType.where("name iLIKE ? OR review iLIKE ?", "%#{params[:search]}%",  "%#{params[:search]}%")
+			@beer_types = @beer.beer_types.where("name iLIKE ? OR review iLIKE ?", "%#{params[:search]}%",  "%#{params[:search]}%")
 		else
-			@beer_types = BeerType.all
+			@beer_types = @beer.beer_types
 		end
 	end
 end
