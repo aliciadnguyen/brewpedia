@@ -1,24 +1,15 @@
 var BeerTypeView = Backbone.View.extend({
 	el: '.form-container',
 
-	events: {
-		'click .actions' : 'formValidate'
-	},
-
 	initialize: function() {
 		this.formValidate();
 	},
 
 	formValidate: function() {
-		$("#beer-form").validate({
+		$("#new_beer_type").validate({
 			debug: true,
 			rules: {
 				"beer_type[name]": {
-					required: true,
-					url: false
-				},
-
-				"beer_type[beer_id]": {
 					required: true,
 					url: false
 				},
@@ -58,6 +49,9 @@ var BeerTypeView = Backbone.View.extend({
 					url: false,
 					number: true
 				}
+			},
+			submitHandler: function(form) {
+				form.submit();
 			}
 		});
 	}
