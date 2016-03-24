@@ -17,12 +17,12 @@
     .box:hover { background-color: #0B4040 }
   }
   .beer:nth-child(3n) {
-    .box { background-color: #69882B; }
+    .box { background-color: #257525; }
     .box:hover { background-color: #0F560F }
   }
   .beer:nth-child(4n) {
-    .box { background-color: #A76025; }
-    .box:hover { background-color: #6B3B12 }
+    .box { background-color: #6B3B12; }
+    .box:hover { background-color: #441F00 }
   }
   h1 { 
     color: white; 
@@ -35,8 +35,10 @@
     word-wrap: break-word;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.65);
   }
-  .beer-img {
-    height: 14vh;
+  i {
+    font-size: 9vh;
+    margin-left: -30px;
+    color: white;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.65);
   }
 }
@@ -54,7 +56,7 @@
   background-size: cover;
   width: inherit;
   padding-bottom: 90px;
-  .form { 
+  form#beer-form { 
     padding: 60px;
     @media(max-width: 450px) { padding: 60px 4vw; }
     .actions input {
@@ -72,7 +74,7 @@
   }
 }
 
-.new_beer_type {
+#beer-form {
   .form-field {
     display: flex;
     .label, .input {
@@ -114,5 +116,11 @@
       height: 60px;
     }
     .label-text { padding-top: 23px; }
+    .error { 
+      color: white;
+      text-transform: uppercase;
+      font-family: Montserrat,sans-serif;
+      font-size: 12px;
+    }
   }
 }

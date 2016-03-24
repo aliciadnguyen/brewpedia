@@ -12,3 +12,4 @@ describe Beer do
 		expect(Beer.count).not_to eq(before_count)
 	end
 end
+

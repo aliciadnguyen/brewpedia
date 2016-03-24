@@ -1,28 +1,23 @@
-== README
+To run application locally, type in terminal:
+  1. vagrant up
+  2. vagrant ssh
+  3. cd /vagrant
+  4. rails s -b 0.0.0.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To test javascript unit test:
+  1. Go to: http://localhost:3000/jasmine
 
-Things you may want to cover:
+To test ruby unit tests:
+  1. Run 'rake spec'
 
-* Ruby version
+When including new gems in Gemfile:
+  1. run 'bundle install'
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+To deploy to heroku:
+  1. Push all the changes to github master
+  2. Run 'git push heroku master'
+  3. Update schema and seed file, run 'heroku run rake:db migrate /seed'
+  4. Look at heroku logs for debugging, run 'heroku logs --app brewpedia'
+  
+To avoid entering username and password for git login:
+  1. Run 'git remote set-url origin git@github.com:username/repo.git'
