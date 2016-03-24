@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery.min
+//= require jquery-ui
 //= require bootstrap.min
 //= require jquery.easing.min
 //= require jquery.scrollTo

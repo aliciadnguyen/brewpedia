@@ -14,13 +14,17 @@ gem 'slim-rails'
 gem "rails-backbone"
 gem 'taps', '~> 0.3.24'
 gem 'activerecord-reset-pk-sequence'
+gem 'rack-contrib'
+gem 'protected_attributes'
+gem 'soulmate'
+gem 'faker'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'shoulda', '~> 3.5'
-    gem 'jasmine-sinon-rails', '~> 1.3', '>= 1.3.4'
+  gem 'jasmine-sinon-rails', '~> 1.3', '>= 1.3.4'
   gem 'jasmine'
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
 end
