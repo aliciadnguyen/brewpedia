@@ -11,12 +11,6 @@ class BeerTypesController < ApplicationController
 		@beer_type = BeerType.find(params[:id])
 	end
 
-	def destroy
-		@beer_type = BeerType.find(params[:id])
-		@beer_type.destroy
-		redirect_to root_path
-	end
-
 	def create
 		@beer_type = BeerType.new(beer_type_params)
 		if @beer_type.save
