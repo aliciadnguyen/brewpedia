@@ -24,8 +24,9 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'shoulda', '~> 3.5'
-  gem 'jasmine-sinon-rails', '~> 1.3', '>= 1.3.4'
+  gem 'simplecov', :require => false
   gem 'jasmine'
+  gem 'jasmine-sinon-rails', '~> 1.3', '>= 1.3.4'
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
 end
 
