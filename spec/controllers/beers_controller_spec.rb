@@ -24,6 +24,7 @@ RSpec.describe BeersController, :type => :controller do
 		before {
 			@beer1 = Beer.create!
 		}
+		
 		it "responds successfully with HTTP 200 status code" do
 			get :show, id: @beer1
 			expect(response).to be_success
