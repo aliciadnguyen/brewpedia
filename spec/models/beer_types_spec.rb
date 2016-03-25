@@ -3,7 +3,7 @@ require "beer_type"
 
 describe BeerType do
 	it "should belong to beer" do
-		should belong_to(:beer)
+		should belong_to(:beer_kind)
 	end
 
 	it "should instantiated a Beer" do
@@ -16,7 +16,7 @@ describe BeerType do
  								   overall: "4.35", 
  								   location: "San Diego", 
  								   brewery: "Pupil", 
- 								   beer_id: 1 )
+ 								   beer_kind_id: 1 )
  			
  		expect(BeerType.count).not_to eq(before_count)
 	end

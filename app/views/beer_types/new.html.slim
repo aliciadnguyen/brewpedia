@@ -8,7 +8,7 @@
 			.input = b.text_field :name
 		.form-field
 			.label for="beer_type[beer_id]" Beer Type
-			.input = b.collection_select :beer_id, Beer.all, :id, :beer_style
+			.input = b.collection_select :beer_kind_id, BeerKind.all, :id, :beer_style
 		.form-field
 			.label for="beer_type[brewery]" Brewery
 			.input = b.text_field :brewery

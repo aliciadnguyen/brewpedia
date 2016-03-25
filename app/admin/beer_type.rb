@@ -1,5 +1,5 @@
 ActiveAdmin.register BeerType do
-  menu :parent => "Beers"
+  menu :parent => "BeerKind"
   permit_params :beer_id, :name, :review, :appearance, :smell, :taste, :overall,
                 :location, :brewery
 

@@ -32,7 +32,7 @@ RSpec.describe BeerTypesController, :type => :controller do
 								 :overall => "4.35", 
 								 :location => "San Diego", 
 								 :brewery => "Pupil", 
-								 :beer_id => 1 }
+								 :beer_kind_id => 1 }
 			
 			expect(BeerType.count).not_to eq(before_count)
 			expect(response).to redirect_to(root_path)
