@@ -1,0 +1,33 @@
+link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
+section#intro.beer
+  .slogan
+    h1 = @find_beer.beer_style
+    p = @find_beer.description
+section#search
+  .container
+    h1 Search for Beers!
+  .search-form
+    = form_tag beer_kind_path, method: :get
+      = text_field_tag :search, params[:search]
+      = submit_tag 'Search', :name => nil
+.row.content.beer
+  - @beers.each do |b|
+    .col-xs-12.col-sm-6.col-md-4.beer-style
+      .boxed
+        .front
+          h1 = b.name
+          p = b.brewery
+          p = b.location
+          .btn.btn-primary.button Find out more information
+        .back 
+          h3 = b.name
+          p = b.review
+          h3 Appearance
+          p = b.appearance
+          h3 Smell
+          p = b.smell
+          h3 Taste
+          p = b.taste
+          h3 Overall Quality
+          p = b.overall
+          p = link_to "Edit", edit_beer_path(b)

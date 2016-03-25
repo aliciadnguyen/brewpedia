@@ -1,47 +1,53 @@
 require 'rails_helper'
+require 'beer'
 
 RSpec.describe BeersController, :type => :controller do 
-	describe "GET #index" do 
+	describe "GET #new" do 
 		it "responds successfully with HTTP 200 status code" do 
-			get :index
+			get :new
 			expect(response).to be_success
 			expect(response).to have_http_status(200)
 		end
 
-		it "renders the index template" do 
-			get :index
-			expect(response).to render_template("index")
+		it "renders the new template" do 
+			get :new
+			expect(response).to render_template("new")
 		end
 
-		it "populates all the beer types" do 
-			beer1, beer2 = Beer.create!, Beer.create!
-			get :index
-			expect(assigns(:beers)).to match_array([beer1, beer2])
+		it "asigns a non created beer to the view" do
+			get :new
+			expect(assigns(:beer)).to be_a_new(Beer)
 		end
 	end
 
-	describe "GET #show" do
-		before {
-			@beer1 = Beer.create!
-		}
-		
-		it "responds successfully with HTTP 200 status code" do
-			get :show, id: @beer1
-			expect(response).to be_success
-			expect(response).to have_http_status(200)
+	describe "POST #create" do
+		it "it should save a beer create by user and redirect to index page" do 
+			post :new
+			before_count = Beer.count
+			post :create, :beer => { :name  =>"Boo Koo", 
+							     :review => "Tis good", 
+								 :appearance => "Delicious", 
+								 :smell => "Great", 
+								 :taste => "Fantastic", 
+								 :overall => "4.35", 
+								 :location => "San Diego", 
+								 :brewery => "Pupil", 
+								 :beer_kind_id => 1 }
+			
+			expect(Beer.count).not_to eq(before_count)
+			expect(response).to redirect_to(root_path)
 		end
+	end
 
-		it "renders the show template" do 
-			get :show, id: @beer1
-			expect(response).to render_template("show")
+	describe "GET #edit" do
+		it "should route get request #edit as" do
+			should route(:get, '/beers/1/edit').to(action: :edit, id: 1)
 		end
+	end
 
-		it "reponds successfully whe passing in a search parameter" do
-			params = {:id => @beer1, :search => "ethan"}
-			get :show, params
-			expect(response).to be_success
-			expect(response).to have_http_status(200)
-			expect(response).to render_template("show")
+	describe "PUT #update" do
+		it "should route put request #update as" do
+			should route(:put, '/beers/1').to(action: :update, id: 1)
 		end
 	end
 end

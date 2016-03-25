@@ -1,3 +1,7 @@
 class Beer < ActiveRecord::Base
-	has_many :beer_types
+	belongs_to :beer_kind
+
+	def self.search(term)
+		where("name iLIKE ? OR review iLIKE ?", "%#{term}%",  "%#{term}%")
+	end
 end

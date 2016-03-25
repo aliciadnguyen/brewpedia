@@ -1,20 +1,43 @@
 ActiveAdmin.register Beer do
-  permit_params :beer_style, :description
+  menu :parent => "BeerKind"
+  permit_params :beer_kind_id, :name, :review, :appearance, :smell, :taste, :overall,
+                :location, :brewery
 
   index do
     selectable_column
     id_column
-    column :beer_style
-    column :description
+    column :beer_kind_id
+    column :name
+    column :review
+    column :appearance
+    column :smell
+    column :taste
+    column :overall
+    column :location
+    column :brewery
     actions
   end
 
-  filter :beer_style
+  filter :beer_kind_id
+  filter :name
+  filter :appearance
+  filter :smell
+  filter :taste
+  filter :overall
+  filter :location
+  filter :brewery
 
   form do |f|
     f.inputs "Beer Details" do
-      f.input :beer_style
-      f.input :description
+      f.input :beer_kind_id
+      f.input :name
+      f.input :review
+      f.input :appearance
+      f.input :smell
+      f.input :taste
+      f.input :overall
+      f.input :location
+      f.input :brewery
     end
     f.actions
   end
