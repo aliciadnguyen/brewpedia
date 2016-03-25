@@ -50,10 +50,4 @@ RSpec.describe BeerTypesController, :type => :controller do
 			should route(:put, '/beer_types/1').to(action: :update, id: 1)
 		end
 	end
-
-	describe "DELETE #destroy" do
-		it "should route delete request #destroy as" do
-			should route(:delete, '/beer_types/1').to(action: :destroy, id: 1)
-		end
-	end
 end

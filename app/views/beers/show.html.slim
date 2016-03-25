@@ -3,6 +3,13 @@ section#intro.beer
   .slogan
     h1 = @beer.beer_style
     p = @beer.description
+section#search
+  .container
+    h1 Search for Beers!
+  .search-form
+    = form_tag beer_path, method: :get
+      = text_field_tag :search, params[:search]
+      = submit_tag 'Search', :name => nil
 .row.content.beer
   - @beer_types.each do |b|
     .col-xs-12.col-sm-6.col-md-4.beer-style
@@ -24,4 +31,3 @@ section#intro.beer
           h3 Overall Quality
           p = b.overall
           p = link_to "Edit", edit_beer_type_path(b)
-          p = link_to "Delete", beer_type_path(b), method: :delete

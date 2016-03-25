@@ -24,6 +24,7 @@ RSpec.describe BeersController, :type => :controller do
 		before {
 			@beer1 = Beer.create!
 		}
+		
 		it "responds successfully with HTTP 200 status code" do
 			get :show, id: @beer1
 			expect(response).to be_success
@@ -32,6 +33,14 @@ RSpec.describe BeersController, :type => :controller do
 
 		it "renders the show template" do 
 			get :show, id: @beer1
+			expect(response).to render_template("show")
+		end
+
+		it "reponds successfully whe passing in a search parameter" do
+			params = {:id => @beer1, :search => "ethan"}
+			get :show, params
+			expect(response).to be_success
+			expect(response).to have_http_status(200)
 			expect(response).to render_template("show")
 		end
 	end
