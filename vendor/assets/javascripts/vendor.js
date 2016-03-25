@@ -1,0 +1,14 @@
+//= require jquery.min
+//= require bootstrap.min
+//= require jquery.easing.min
+//= require jquery.scrollTo
+//= require jquery.flip
+//= require jquery.validate
+//= require rails
+//= require underscore
+//= require backbone
+//= require beer
+//= require beer_types
+//= require home
+//= require wow.min
+//= require custom

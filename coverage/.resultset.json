@@ -460,6 +460,8 @@
         1,
         1,
         1,
+        1,
+        1,
         1
       ],
       "/vagrant/config/initializers/backtrace_silencers.rb": [
@@ -1412,6 +1414,6 @@
         null
       ]
     },
-    "timestamp": 1458942303
+    "timestamp": 1458944773
   }
 }
