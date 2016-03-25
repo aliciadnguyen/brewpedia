@@ -3,7 +3,7 @@ require "beer_kind"
 
 describe BeerKind do
 	it "should have many beer types" do
-		should have_many(:beer_types)
+		should have_many(:beers)
 	end
 	
 	it "should instantiated a Beer" do

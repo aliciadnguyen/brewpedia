@@ -2,7 +2,7 @@
 	h3 Can't find a beer you're looking for?
 	p. No problem, add one today!
 .form-container
-	.form = form_for @beer_type, action: :create do |b|
+	.form = form_for @beer, action: :create do |b|
 		.form-field
 			.label for="beer_type[name]" Name
 			.input = b.text_field :name

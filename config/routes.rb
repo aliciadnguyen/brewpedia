@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'beer_kinds#index'
   get '/beer_kind/:id' => 'beer_kinds#show', as: :beer_kind
-  resources :beer_types
+  resources :beers
   # get '/beer_types/:id' => 'beer_types#show', as: :beer_type
   # get '/beer_types/:id/edit' => 'beer_types#edit', as: :edit_beer_type
   # patch '/beer_types/:id' => 'beer_types#update'

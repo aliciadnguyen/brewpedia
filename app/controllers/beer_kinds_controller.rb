@@ -5,12 +5,12 @@ class BeerKindsController < ApplicationController
 
 	def show
 		@find_beer = BeerKind.find(params[:id])
-		@beer_types = @find_beer.beer_types
+		@beers = @find_beer.beers
 
 		if params[:search]
-			@beer_types = @find_beer.beer_types.search(params[:search])
+			@beers = @find_beer.beers.search(params[:search])
 		else
-			@beer_types = @find_beer.beer_types
+			@beers = @find_beer.beers
 		end
 	end
 end

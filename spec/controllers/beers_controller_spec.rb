@@ -1,7 +1,7 @@
 require 'rails_helper'
-require 'beer_type'
+require 'beer'
 
-RSpec.describe BeerTypesController, :type => :controller do 
+RSpec.describe BeersController, :type => :controller do 
 	describe "GET #new" do 
 		it "responds successfully with HTTP 200 status code" do 
 			get :new
@@ -16,15 +16,15 @@ RSpec.describe BeerTypesController, :type => :controller do
 
 		it "asigns a non created beer to the view" do
 			get :new
-			expect(assigns(:beer_type)).to be_a_new(BeerType)
+			expect(assigns(:beer)).to be_a_new(Beer)
 		end
 	end
 
 	describe "POST #create" do
 		it "it should save a beer create by user and redirect to index page" do 
 			post :new
-			before_count = BeerType.count
-			post :create, :beer_type => { :name  =>"Boo Koo", 
+			before_count = Beer.count
+			post :create, :beer => { :name  =>"Boo Koo", 
 							     :review => "Tis good", 
 								 :appearance => "Delicious", 
 								 :smell => "Great", 
@@ -34,20 +34,20 @@ RSpec.describe BeerTypesController, :type => :controller do
 								 :brewery => "Pupil", 
 								 :beer_kind_id => 1 }
 			
-			expect(BeerType.count).not_to eq(before_count)
+			expect(Beer.count).not_to eq(before_count)
 			expect(response).to redirect_to(root_path)
 		end
 	end
 
 	describe "GET #edit" do
 		it "should route get request #edit as" do
-			should route(:get, '/beer_types/1/edit').to(action: :edit, id: 1)
+			should route(:get, '/beers/1/edit').to(action: :edit, id: 1)
 		end
 	end
 
 	describe "PUT #update" do
 		it "should route put request #update as" do
-			should route(:put, '/beer_types/1').to(action: :update, id: 1)
+			should route(:put, '/beers/1').to(action: :update, id: 1)
 		end
 	end
 end

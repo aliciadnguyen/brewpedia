@@ -1,4 +1,4 @@
-class BeerType < ActiveRecord::Base
+class Beer < ActiveRecord::Base
 	belongs_to :beer_kind
 
 	def self.search(term)

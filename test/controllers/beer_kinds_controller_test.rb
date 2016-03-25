@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe BeerController, :type => :controller do 
+RSpec.describe BeerKindController, :type => :controller do 
 	describe "GET #index" do 
 		it "populates all the beer types" do 
 			get :index

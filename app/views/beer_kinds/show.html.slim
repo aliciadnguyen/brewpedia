@@ -11,7 +11,7 @@ section#search
       = text_field_tag :search, params[:search]
       = submit_tag 'Search', :name => nil
 .row.content.beer
-  - @beer_types.each do |b|
+  - @beers.each do |b|
     .col-xs-12.col-sm-6.col-md-4.beer-style
       .boxed
         .front
@@ -30,4 +30,4 @@ section#search
           p = b.taste
           h3 Overall Quality
           p = b.overall
-          p = link_to "Edit", edit_beer_type_path(b)
+          p = link_to "Edit", edit_beer_path(b)

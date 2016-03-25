@@ -1,3 +1,3 @@
 class BeerKind < ActiveRecord::Base
-	has_many :beer_types
+	has_many :beers
 end
