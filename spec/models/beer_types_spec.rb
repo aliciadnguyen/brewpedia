@@ -20,4 +20,10 @@ describe BeerType do
  			
  		expect(BeerType.count).not_to eq(before_count)
 	end
+
+	it "should return the correct value when searching query" do
+		beerType = BeerType.create(name: "Boo", review: "Good")
+		result = BeerType.search("Boo")
+		expect(result).to include(beerType)
+	end
 end

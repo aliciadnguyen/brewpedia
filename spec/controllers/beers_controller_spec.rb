@@ -34,5 +34,13 @@ RSpec.describe BeersController, :type => :controller do
 			get :show, id: @beer1
 			expect(response).to render_template("show")
 		end
+
+		it "reponds successfully whe passing in a search parameter" do
+			params = {:id => @beer1, :search => "ethan"}
+			get :show, params
+			expect(response).to be_success
+			expect(response).to have_http_status(200)
+			expect(response).to render_template("show")
+		end
 	end
 end

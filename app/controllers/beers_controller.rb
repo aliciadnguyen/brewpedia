@@ -8,7 +8,7 @@ class BeersController < ApplicationController
 		@beer_types = @beer.beer_types
 
 		if params[:search]
-			@beer_types = @beer.beer_types.where("name iLIKE ? OR review iLIKE ?", "%#{params[:search]}%",  "%#{params[:search]}%")
+			@beer_types = @beer.beer_types.search(params[:search])
 		else
 			@beer_types = @beer.beer_types
 		end
