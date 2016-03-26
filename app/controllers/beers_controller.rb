@@ -14,7 +14,7 @@ class BeersController < ApplicationController
 	def create
 		@beer = Beer.new(beer_params)
 		if @beer.save
-			redirect_to root_path
+			redirect_to beer_kind_path(@beer.beer_kind_id)
 		else
 			render "new"
 		end
@@ -23,7 +23,7 @@ class BeersController < ApplicationController
 	def update
 		@beer = Beer.find(params[:id])
 		if @beer.update(beer_params)
-			redirect_to root_path
+			redirect_to beer_kind_path(@beer.beer_kind_id)
 		else
 			render 'edit'
 		end
