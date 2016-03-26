@@ -44,7 +44,7 @@ RSpec.describe BeersController, :type => :controller do
 								 	 :beer_kind_id => 1 }
 			
 			expect(Beer.count).not_to eq(before_count)
-			expect(response).to redirect_to(root_path)
+			expect(response).to redirect_to('/beer_kind/1')
 		end
 	end
 
@@ -87,7 +87,7 @@ RSpec.describe BeersController, :type => :controller do
 		end
 
 		it 'renders the show template' do
-			expect(response).to redirect_to(root_path)
+			expect(response).to redirect_to('/beer_kind/1')
 		end
 
 		it 'updates the name of beer' do
