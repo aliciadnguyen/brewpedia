@@ -6,6 +6,7 @@ html lang="en"
     meta content="" name="description" 
     meta content="" name="author" 
     title Myapp
+    = stylesheet_link_tag 'vendor', media: 'all', debug: false, 'data-turbolinks-track' => true
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags 
   body#page-top data-spy="scroll" data-target=".navbar-custom" 
@@ -50,4 +51,5 @@ html lang="en"
               | * Source: Beer Advocate, Wikipedia, 
               | Beer by Mark Caron from Noun Project,
               | Plus by Nimal Raj from the Noun Project
+  = javascript_include_tag 'vendor', debug: false
   = javascript_include_tag 'application', 'data-turbolinks-track' => true

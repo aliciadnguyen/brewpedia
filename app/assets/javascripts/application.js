@@ -10,18 +10,4 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery.min
-//= require jquery-ui
-//= require bootstrap.min
-//= require jquery.easing.min
-//= require jquery.scrollTo
-//= require jquery.flip
-//= require jquery.validate.js
-//= require rails
-//= require underscore
-//= require backbone
-//= require beer
-//= require beer_types
-//= require home
-//= require wow.min
-//= require custom
+// require_tree .
