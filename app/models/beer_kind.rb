@@ -13,8 +13,7 @@ class BeerKind < ActiveRecord::Base
 			b = JSON.parse(response.body)
 			for i in 0..response["data"].length-1
 				puts b["data"][i]["name"]
-				BeerKind.create(beer_style: b["data"][i]["name"]).persisted?
-				# self.new(b["data"][i]["name"])
+				BeerKind.create(beer_style: b["data"][i]["name"]) if !BeerKind.exists?(['beer_style iLIKE ?', b["data"][i]["name"]])
 			end
 		else
 			puts "Error!"
