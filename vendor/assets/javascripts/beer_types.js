@@ -6,45 +6,45 @@ var BeerTypeView = Backbone.View.extend({
 	},
 
 	formValidate: function() {
-		$("#new_beer_type").validate({
+		$("#new_beer").validate({
 			debug: true,
 			rules: {
-				"beer_type[name]": {
+				"beer[name]": {
 					required: true,
 					url: false
 				},
 
-				"beer_type[brewery]": {
+				"beer[brewery]": {
 					required: true,
 					url: false
 				},
 
-				"beer_type[location]": {
+				"beer[location]": {
 					required: true,
 					url: false
 				},
 
-				"beer_type[review]": {
+				"beer[review]": {
 					required: true,
 					url: false
 				},
 
-				"beer_type[appearance]": {
+				"beer[appearance]": {
 					required: true,
 					url: false
 				},
 
-				"beer_type[smell]": {
+				"beer[smell]": {
 					required: true,
 					url: false
 				},
 
-				"beer_type[taste]": {
+				"beer[taste]": {
 					required: true,
 					url: false
 				},
 
-				"beer_type[overall]": {
+				"beer[overall]": {
 					required: true,
 					url: false,
 					number: true
