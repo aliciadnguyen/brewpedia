@@ -5,6 +5,7 @@ class BeerKindsController < ApplicationController
 	end
 
 	def show
+		BeerKind.make_beers(params[:id])
 		@find_beer = BeerKind.find(params[:id])
 		@beers = @find_beer.beers
 

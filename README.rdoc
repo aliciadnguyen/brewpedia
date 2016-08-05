@@ -2,7 +2,7 @@ To run application locally, type in terminal:
   1. vagrant up
   2. vagrant ssh
   3. cd /vagrant
-  4. rails s -b 0.0.0.0
+  4. rails s -b0.0.0.0
 
 To test javascript unit test:
   1. Go to: http://localhost:3000/jasmine
