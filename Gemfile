@@ -17,6 +17,7 @@ gem 'activerecord-reset-pk-sequence'
 gem 'rack-contrib'
 gem 'protected_attributes'
 gem 'soulmate'
+gem 'dalli'
 gem 'httparty', '~> 0.13.7'
 gem 'faker'
 gem 'sdoc', '~> 0.4.0', group: :doc
