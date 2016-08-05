@@ -38,19 +38,18 @@ class BeerKind < ActiveRecord::Base
 			b = JSON.parse(response.body)
 			if b["data"].is_a?(Array)
 				for index in 0..b["data"].length-1
-					# id = b["data"][index]["id"]
-					puts id.to_s
 					name = b["data"][index]["name"]
-					puts "NAME IS: " + name
+					abv = b["data"][index]["abv"].to_f
+					puts abv
 					description = b["data"][index]["description"]
-					Beer.create(beer_kind_id: id, appearance: description, name: name) if !Beer.exists?(['name iLIKE ?', name])
+					Beer.create(beer_kind_id: id, appearance: description, name: name, abv: abv) if !Beer.exists?(['name iLIKE ?', name])
 				end
 			elsif b["data"].is_a?(Hash)
 				name = b["data"]["name"]
-				puts "HASH"
-				puts "HASH NAME IS: " + name
+				abv = b["data"][index]["abv"].to_f
+				puts abv
 				description = b["data"]["description"]
-				Beer.create(beer_kind_id: id, appearance: description, name: name) if !Beer.exists?(['name iLIKE ?', name])
+				Beer.create(beer_kind_id: id, appearance: description, name: name, abv: abv) if !Beer.exists?(['name iLIKE ?', name])
 			end
 		else
 			puts "Error!"
