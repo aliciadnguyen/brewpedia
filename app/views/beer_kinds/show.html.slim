@@ -24,10 +24,16 @@ section#search
           p = b.review
           h3 Appearance
           p = b.appearance
-          h3 Smell
-          p = b.smell
-          h3 Taste
-          p = b.taste
-          h3 Overall Quality
-          p = b.overall
+          h3 ABV
+          p = b.abv
+          - if b.smell
+              h3 Smell
+              p = b.smell
+          - if b.taste
+              h3 Taste
+              p = b.taste
+          - if b.overall
+              h3 Overall Quality
+              p = b.overall
           p = link_to "Edit", edit_beer_path(b)
+

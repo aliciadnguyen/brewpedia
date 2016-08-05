@@ -16,7 +16,7 @@ RSpec.describe BeerKindsController, :type => :controller do
 		it "populates all the beer types" do 
 			beer1, beer2 = BeerKind.create!, BeerKind.create!
 			get :index
-			expect(assigns(:beers)).to match_array([beer1, beer2])
+			expect(assigns(:beer_kinds)).to include(beer1, beer2)
 		end
 	end
 

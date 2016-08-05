@@ -22,15 +22,13 @@ section#beer-types.home-section.text-center
       .col-lg-2.col-lg-offset-5
         hr.marginbot-50
     .row
-      - @beers.each do |b|
+      - @beer_kinds.each do |b|
         .col-xs-12.col-sm-6.col-md-3.beer
           .wow.bounceInUp data-wow-delay="0.2s" 
             a = link_to beer_kind_path(b)
-              .team.boxed-grey.box
-                .inner
-                  i.fa.fa-beer
-                  //img.beer-img src="/assets/white-beer.png"
-                  h1 = b.beer_style
+              / .team.boxed-grey.box
+              .inner
+                p = b.beer_style
 /! Section: contact
 section#contact.home-section.text-center
   .heading-contact

@@ -1,9 +1,11 @@
 class BeerKindsController < ApplicationController
 	def index
-		@beers = BeerKind.all
+		BeerKind.save_data_from_api
+		@beer_kinds = BeerKind.all.order(:beer_style)
 	end
 
 	def show
+		BeerKind.make_beers(params[:id])
 		@find_beer = BeerKind.find(params[:id])
 		@beers = @find_beer.beers
 
