@@ -23,18 +23,24 @@ html lang="en"
         /! Collect the nav links, forms, and other content for toggling
         .collapse.navbar-collapse.navbar-right.navbar-main-collapse
           ul.nav.navbar-nav
-            li.active
-              a href="/#intro"  Home
-            li
-              a href="/#beer-types" 
-                i.fa.fa-beer
-                ' Beer Kinds
-            li
-              = link_to new_beer_path
-                i.fa.fa-plus-square 
-                ' Add Beer
-            li
-              a href="/#contact"  Contact
+            - if current_user
+              li.active
+                a href="/#intro"  Home
+              li
+                a href="/#beer-types" 
+                  i.fa.fa-beer
+                  ' Beer Kinds
+              li
+                = link_to new_beer_path
+                  i.fa.fa-plus-square 
+                  ' Add Beer
+              li
+                a href="/#contact"  Contact
+              li = link_to 'Logout', logout_path, method: "delete"
+            - else
+              li = link_to 'Login', 'login'
+              li = link_to 'Signup', 'signup'
+            
         /! /.navbar-collapse
       /! /.container
     = yield

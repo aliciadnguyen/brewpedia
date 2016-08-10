@@ -1,4 +1,7 @@
 class BeerKindsController < ApplicationController
+
+	before_action :require_user, only: [:index, :show]
+
 	def index
 		BeerKind.save_data_from_api
 		@beer_kinds = BeerKind.all.order(:beer_style)
