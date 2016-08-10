@@ -4,6 +4,13 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'beer_kinds#index'
   get '/beer_kind/:id' => 'beer_kinds#show', as: :beer_kind
+
+  get 'signup' => 'users#new'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  resources :users
   resources :beers
   # get '/beer_types/:id' => 'beer_types#show', as: :beer_type
   # get '/beer_types/:id/edit' => 'beer_types#edit', as: :edit_beer_type

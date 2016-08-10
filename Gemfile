@@ -18,6 +18,7 @@ gem 'rack-contrib'
 gem 'protected_attributes'
 gem 'soulmate'
 gem 'dalli'
+gem 'bcrypt', '~> 3.1.7'
 gem 'httparty', '~> 0.13.7'
 gem 'faker'
 gem 'sdoc', '~> 0.4.0', group: :doc
