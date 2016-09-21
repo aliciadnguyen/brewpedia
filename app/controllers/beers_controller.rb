@@ -11,6 +11,12 @@ class BeersController < ApplicationController
 
 	end
 
+	def index
+		if params[:search]
+			@beers = Beer.search(params[:search])
+		end
+	end
+
 	def edit
 		@beer = Beer.find(params[:id])
 	end

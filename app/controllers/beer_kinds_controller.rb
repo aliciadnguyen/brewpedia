@@ -5,6 +5,10 @@ class BeerKindsController < ApplicationController
 	def index
 		BeerKind.save_data_from_api
 		@beer_kinds = BeerKind.all.order(:beer_style)
+
+		if params[:search]
+			@beers = Beer.search(params[:search])
+		end
 	end
 
 	def show

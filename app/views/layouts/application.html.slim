@@ -34,8 +34,8 @@ html lang="en"
                 = link_to new_beer_path
                   i.fa.fa-plus-square 
                   ' Add Beer
-              li
-                a href="/#contact"  Contact
+              / li
+              /   a href="/#contact"  Contact
               li = link_to 'Logout', logout_path, method: "delete"
             - else
               li = link_to 'Login', 'login'
