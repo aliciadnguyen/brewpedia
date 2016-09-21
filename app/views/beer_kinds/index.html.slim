@@ -2,40 +2,30 @@ link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.m
 /! Section: intro
 section#intro.intro
   .slogan
-    h2 WELCOME TO BREWPEDIA
-    h4 An encyclopedia of beers
+    / h2 WELCOME TO BREWPEDIA
+    / h4 An encyclopedia of beers
     section#search
-      .container
-        h1 Search for Beers!
       .search-form
         = form_tag beers_path, method: :get
-          = text_field_tag :search, params[:search]
+          = text_field_tag :search, params[:search], :placeholder => "Search for beers"
           = submit_tag 'Search', :name => nil
-  .page-scroll
-    a.btn.btn-circle.hidden-xs href="#beer-types" 
-      i.fa.fa-angle-double-down.animated
 /! Section: about
-section#beer-types.home-section.text-center
+section#beer-types.home-section
   .heading.beer-types
     .container
       .row
         .col-lg-8.col-lg-offset-2
-          .wow.bounceInDown data-wow-delay="0.4s" 
-            .section-heading
-              h2 Discover Beers!
-              i.fa.fa-2x.fa-angle-down
+          .section-heading
+            h2 Beer Categories
   .container
     .row
-      .col-lg-2.col-lg-offset-5
-        hr.marginbot-50
-    .row
       - @beer_kinds.each do |b|
-        .col-xs-12.col-sm-6.col-md-3.beer
-          .wow.bounceInUp data-wow-delay="0.2s" 
-            a = link_to beer_kind_path(b)
-              / .team.boxed-grey.box
-              .inner
-                p = b.beer_style
+        .col-xs-12.col-sm-6.col-md-6.beer
+          / .wow.bounceInUp data-wow-delay="0.2s" 
+          a = link_to beer_kind_path(b)
+            / .team.boxed-grey.box
+            .inner
+              p = b.beer_style
 /! Section: contact
 / section#contact.home-section.text-center
   .heading-contact

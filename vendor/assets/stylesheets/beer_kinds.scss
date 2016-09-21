@@ -13,7 +13,10 @@ section.beer {
   .slogan {
     padding: 80px 70px 50px;
     color: white;
-    p { font-size: 18px; }
+    p { 
+      font-size: 18px; 
+      font-weight: 100;
+    }
   }
 }
 
@@ -69,5 +72,21 @@ section.beer {
   }
   .beer-style:nth-child(4n) {
     .front, .back { background-color: #FFF32D; }
+  }
+}
+
+.search-form form {
+  margin: 0px auto;
+  display: flex;
+  padding-top: 20px;
+  width: 74vmin;
+
+  input[type=submit] {
+    margin: 6px;
+    background-color: white;
+    border-color: white;
+    color: black;
+    font-size: 14px;
+    width: 23vmin;
   }
 }
