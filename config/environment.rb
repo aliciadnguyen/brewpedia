@@ -4,6 +4,6 @@ require File.expand_path('../application', __FILE__)
 # Initialize the Rails application.
 Rails.application.initialize!
 
-Rails.application.configure do
-	config.gem 'dalli'
-end
+# Rails.application.configure do
+# 	config.gem 'dalli'
+# end
