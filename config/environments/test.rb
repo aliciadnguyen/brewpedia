@@ -7,6 +7,16 @@ Rails.application.configure do
   # and recreated between test runs. Don't rely on the data there!
   config.cache_classes = true
 
+  require 'active_support/cache/dalli_store23'
+  config.cache_store = :dalli_store,
+                      (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                      {:username => ENV["MEMCACHIER_USERNAME"],
+                       :password => ENV["MEMCACHIER_PASSWORD"],
+                       :failover => true,
+                       :socket_timeout => 1.5,
+                       :socket_failure_delay => 0.2
+                      }
+
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
   # preloads Rails for running tests, you may have to set it to true.
