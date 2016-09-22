@@ -329,7 +329,7 @@ hr {
 
 #intro.intro {
 	padding: 120px 0 0px 0;
-  height: 250px;
+  height: 340px;
 }
 
 .intro .slogan {
@@ -370,7 +370,10 @@ hr {
 	color: #fff;
 	text-shadow: -1px 1px 1px #000;
   margin: 0px 0 0px;
-  padding-bottom: 50px;
+}
+
+.slogan h1, h2, h3, h4 {
+  padding-top: 30px;
 }
 
 

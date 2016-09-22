@@ -16,8 +16,8 @@
 
  html, body {
   background: #fff;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
   margin: 0;
   padding: 0;
   text-transform: lowercase;
