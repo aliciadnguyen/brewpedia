@@ -82,19 +82,22 @@
 }
 
 .form-container .form {
-  margin: 0px 0px 0px 50px;
+  margin: 0px 0px 0px 2vmin;
 }
 
 form#new_beer, .edit_beer {
 
   .form-field {
     display: flex;
+    width: 75vmin;
   }
 
   .actions input {
-    width: 295px;
-    color: black;
-    background-color: white;
+    width: 75vmin;
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+    height: 55px;
     height: 55px;
   }
 
@@ -103,16 +106,20 @@ form#new_beer, .edit_beer {
     border-color: black;
     border-width: 29px;
     color: white;
-    width: 120px;
+    width: 170px;
     margin: 5px;
     border-radius: 0px;
     padding: 23px;
   }
 
   .input select {
-    width: 170px;
+    width: 60vmin;
     height: 64px;
     margin: 6px;
+  }
+
+  .input {
+    width: inherit;
   }
 }
 

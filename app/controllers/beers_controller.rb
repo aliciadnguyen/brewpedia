@@ -1,6 +1,6 @@
 class BeersController < ApplicationController
 	
-	before_action :require_user, only: [:new, :show, :edit, :create, :update]
+	before_action :require_user, only: [:new, :edit, :create, :update]
 
 	def new
 		@beer = Beer.new
