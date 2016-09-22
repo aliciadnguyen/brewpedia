@@ -16,7 +16,7 @@ When including new gems in Gemfile:
 To deploy to heroku:
   1. Push all the changes to github master
   2. Run 'git push heroku master'
-  3. Update schema and seed file, run 'heroku run rake:db migrate /seed'
+  3. Update schema and seed file, run 'heroku rake:db reset / migrate /seed'
   4. Look at heroku logs for debugging, run 'heroku logs --app brewpedia'
   
 To avoid entering username and password for git login:
