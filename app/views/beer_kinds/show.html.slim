@@ -4,11 +4,9 @@ section#intro.beer
     h1 = @find_beer.beer_style
     p = @find_beer.description
 section#search
-  .container
-    h1 Search for Beers!
   .search-form
     = form_tag beer_kind_path, method: :get
-      = text_field_tag :search, params[:search]
+      = text_field_tag :search, params[:search], :placeholder => "Search for beers"
       = submit_tag 'Search', :name => nil
 .row.content.beer
   - @beers.each do |b|
@@ -35,5 +33,5 @@ section#search
           - if b.overall
               h3 Overall Quality
               p = b.overall
-          p = link_to "Edit", edit_beer_path(b)
+          .btn.btn-primary.button = link_to "Edit", edit_beer_path(b)
 

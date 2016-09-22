@@ -43,6 +43,10 @@
   }
 }
 
+.row.content.beer {
+  margin-top: 75px;
+}
+
 .add-beer {
   background-color: black;
   height: 290px;
@@ -52,9 +56,8 @@
 }
 
 .form-container {
-  background: url(/assets/barrel.jpg) center no-repeat;
-  background-size: cover;
   width: inherit;
+  padding-top: 125px;
   padding-bottom: 90px;
   form#beer-form { 
     padding: 60px;
@@ -71,6 +74,45 @@
       font-weight: 700;
       letter-spacing: 1px;
     }
+  }
+}
+
+.form-container {
+  background-color: #1DA597;
+}
+
+.form-container .form {
+  margin: 0px 0px 0px 50px;
+}
+
+form#new_beer, .edit_beer {
+
+  .form-field {
+    display: flex;
+  }
+
+  .actions input {
+    width: 295px;
+    color: black;
+    background-color: white;
+    height: 55px;
+  }
+
+  .label {
+    background: black;
+    border-color: black;
+    border-width: 29px;
+    color: white;
+    width: 120px;
+    margin: 5px;
+    border-radius: 0px;
+    padding: 23px;
+  }
+
+  .input select {
+    width: 170px;
+    height: 64px;
+    margin: 6px;
   }
 }
 

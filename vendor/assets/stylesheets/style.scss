@@ -30,8 +30,8 @@ h6 {
 }
 
 p {
-  margin: 0 0 20px;
-  font-size: 16px;
+  margin: 0 0 0px;
+  font-size: 14px;
   line-height: 1.6em;
 }
 
@@ -60,63 +60,12 @@ a:focus {
   @media(min-width: 769px) { display: none; }
 }
 
-// .bottom-nav {
-//   @media(max-width: 768px) { display: none; }
-//   .container {
-//     color: white;
-//     border-radius: 9px;
-//     background-color: #922E2E;
-//     float: right;
-//     height: 61px;
-//     font-size: 34px;
-//     width: 291px;
-//     .add { 
-//       margin: 0 auto;
-//       display: table;
-//       a {
-//         color: white;
-//         font-size: 25px;
-//         text-transform: uppercase;
-//         font-family: Montserrat,sans-serif;
-//         -webkit-font-smoothing: antialiased;
-//         letter-spacing: 5px;
-//       }
-//     }
-//     img {
-//       height: 40px;
-//     }
-//   }
-// }
-
-// .navbar-fixed-bottom {
-//     padding: 0 0 !important;
-//     background-color: #ddd;
-//     border-top: 2px solid #464646;
-//     .container {
-//       height: 75px;
-//       padding: 15px 0px 0px 0px;
-//       .add {
-//         margin: 0px auto;
-//         display: table;
-//         a { 
-//           color: #464646;
-//           font-size: 25px;
-//           text-transform: uppercase;
-//           font-family: Montserrat,sans-serif;
-//           -webkit-font-smoothing: antialiased;
-//           letter-spacing: 5px;
-//         }
-//         img {
-//           height: 45px;
-//           padding-right: 10px;
-//         }
-//       }
-//     }
-//   }
-
 .navbar {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255,255,255,.8);
+  .container {
+    padding: 0 20px;
+  }
 	
 }
 
@@ -154,7 +103,7 @@ a:focus {
 
 
 .navbar-custom ul.nav li a {
-	font-size: 17px;
+	font-size: 12px;
 	letter-spacing: 1px;
   color: #444;
 	text-transform: uppercase;
@@ -323,6 +272,7 @@ hr {
 ============================ */
 
 .home-section {
+  padding-left: 50px;
   padding-top: 45px;
   padding-bottom: 110px;
 	display:block;
@@ -333,12 +283,9 @@ hr {
 
 
 .section-heading h2 {
-	font-size: 40px;
-  margin-bottom: 0px;
+	font-size: 25px;
+  margin-bottom: 10px;
   color: black;
-}
-.section-heading i {
-	margin-bottom: 20px;
 }
 
 
@@ -381,8 +328,8 @@ hr {
 }
 
 #intro.intro {
-	padding: 180px 0 0px 0;
-  height: 500px;
+	padding: 120px 0 0px 0;
+  height: 250px;
 }
 
 .intro .slogan {

@@ -19,7 +19,7 @@ html lang="en"
           button.navbar-toggle data-target=".navbar-main-collapse" data-toggle="collapse" type="button" 
             i.fa.fa-bars
           a.navbar-brand href="/" 
-            h1 BEER REVIEWS
+            h1 Brewpedia
         /! Collect the nav links, forms, and other content for toggling
         .collapse.navbar-collapse.navbar-right.navbar-main-collapse
           ul.nav.navbar-nav
@@ -34,8 +34,8 @@ html lang="en"
                 = link_to new_beer_path
                   i.fa.fa-plus-square 
                   ' Add Beer
-              li
-                a href="/#contact"  Contact
+              / li
+              /   a href="/#contact"  Contact
               li = link_to 'Logout', logout_path, method: "delete"
             - else
               li = link_to 'Login', 'login'
